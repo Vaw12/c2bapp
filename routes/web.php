@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 //Route::post('/get-token', [MpesaController::class , 'getAccessToken']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/forms', [App\Http\Controllers\PagesController::class, 'display']);
