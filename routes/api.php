@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
@@ -23,7 +24,7 @@ Route::middleware('auth:api')->prefix('v1')->group(function(){
     });
 
     Route::apiResource('/authors', AuthorController::class);
-
+    Route::apiResource('/books', BookController::class);
     //Route::get('/authors/{author}', [AuthorController::class, 'show']);
     //Route::get('/authors/{author}', [AuthorController::class, 'show']);
     
