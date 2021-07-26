@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
 use App\Models\BookAuthor;
 use Illuminate\Http\Request;
-use App\Http\Resources\BookResource;
-use App\Http\Requests\BookRequest;
 
-class BookController extends Controller
+class BookAuthorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +14,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return BookResource::collection(Book::all());
+        //
     }
 
     /**
@@ -36,7 +33,7 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BookRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -44,51 +41,45 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\BookAuthor  $bookAuthor
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
+    public function show(BookAuthor $bookAuthor)
     {
-        return new BookResource($book);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\BookAuthor  $bookAuthor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Book $book)
+    public function edit(BookAuthor $bookAuthor)
     {
-        
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\BookAuthor  $bookAuthor
      * @return \Illuminate\Http\Response
      */
-    public function update(BookRequest $request, Book $book)
+    public function update(Request $request, BookAuthor $bookAuthor)
     {
-        $book->update([
-            'name' => $request->input('name'),
-            'descritiption' => $request->input('description'),
-        ]);
-
-        return new BookResource($book);
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\BookAuthor  $bookAuthor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
+    public function destroy(BookAuthor $bookAuthor)
     {
-        $book->delete();
-        return response(null, 204);
+        //
     }
 }
